@@ -64,6 +64,7 @@ function getRecentPostsArray(blogPosts) {
             imageAlt: blogPosts[i].imageAlt,
             date: blogPosts[i].date,
             preview: blogPosts[i].preview,
+            url: blogPosts[i].url,
         })
     }
 }
