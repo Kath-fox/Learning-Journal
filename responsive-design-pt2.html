@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Learning Journal</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:wght@300;900&display=swap|Source+Code+Pro:400,900">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+         crossorigin="anonymous" 
+         referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <div class="header-flex">
+                <div class="site-title">
+                    <p>&lt;code comments&gt;</p>
+                </div>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html#intro" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="index.html#recent" class="nav__link">Blog</a></li>
+                        <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        
+        <!-- Intro -->
+        <section class="intro-section container">
+
+            <div class="intro-text">
+                <h1>Responsive design 
+                </br>part II</h1>
+                <p>Read my top take-aways from the Scrimba responsive design module. Here's the second part of my checklist
+                for creating a website that is fully responsive.</p>
+            </div>
+
+        </section>
+
+        <section class="blog-section container">
+
+            <p>The responsive design module on Scrimba has cleared up so many CSS questions for me. As I worked through 
+            it I made some notes that I have turned into this checklist, that is as much for me as it is for anyone else! 
+            There's definitely still a lot of CSS that seems like sorcery, but I'm now feeling a little more confident
+            that I can build something that is actually responsive.  I hope you find this useful too.....</p>
+            
+            <h2>8.Line height</h2>
+            <p>Set the line height to a unitless number value that relates to the font size of the element. As a rule of 
+            thumb set it to 1.5 (1.5 x the font size)</p>
+            
+            <h2>9. Media queries</h2>
+            <p>Use media queries to adjust font size and layout on larger screens. Larger screens will likely need more 
+            white space from padding and margins and navigations should also be different depending on screen size.  Use 
+            flex to display a nav in one row for a larger screen and block to display in a column for a small screen. 
+            Common media query break points are as follows, but you should use this as a guide and go with what works for 
+            your specific project:<br>
+            <strong>480px</br>
+            768px</br>
+            1024px</br>
+            1280px</strong></p>
+        
+            <h2>10. Background images</h2>
+            <p>When setting a background image set the size to "cover" so that it adjusts to the size of the screen whilst 
+            maintaining its ratio.</p>
+            
+            <h2>11. Use grid template areas to achive a responsive layout</h2>
+            <p>Using grid template areas can really help you to visualise your layout. One you have defined your grid areas 
+            media queries become much easier to manage. In the below example you can see how easy it is to switch up your 
+            layout as the screen size increases:</p></br>
+            <img src="img/grid-areas-img.png" alt="grid template areas code snippet" class="blog-seciton__img">
+            <p><a href"https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids">This 
+            MDN article </a>gives some really clear examples</p>
+
+
+            <h2>12. Use minmax to make column sizes more responsive</h2>
+            <p>As opposed to using pixels to fix the size of grid columns you can use minmax to allow them to flex depending
+            on the size of the viewport. Even better, set the min in pixels and use the 'fr' unit for the max.  The fr unit is 
+            fractional and will allocate the element space depending on what is available, so when the screen size is small this 
+            will ensure elements stay above the minimum size, but when there is plenty of space the size will be dictated by what 
+            is available.
+            </p>
+
+            <h2>13. The ultimate responsive grid layout - no media queries required</h2>
+            <p>Kevin Powell shared this great tip for achieving a responsove image gallery or similar using the method described 
+            above and adding in the auto-fit keyword, which allows your columns to wrap into a new row if there is not enough space 
+            to accomodate the min width, which means that without needing any media queries your grid will resize itself!</p>
+            <img src="img/autofit-img.png" alt="autofit code snippet" class="blog-seciton__img">
+            <p><a href"https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/">This css-tricks.com article
+            </a>gives a couple of great examples of making a responsive grid without media queries.</p>
+
+            </br><p>And that's a wrap 😊 I hope there were a few useful nuggets in there. With many thanks to Guil Hernandez and Kevin 
+            Powell for for sharing their expertise through the Scrimba responsive design module. Now onwards and upwards to APIs!</p>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/kath-fox-991a558a/">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/Kath-fox">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://twitter.com/KathFox5">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+            <p>Illustrations are from undraw.co</p>
+        </footer>
+
+    
+    <script src="js/index.js" type="module"></script>
+    </body>
+</html>
+
+

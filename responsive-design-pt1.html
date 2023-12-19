@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Learning Journal</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:wght@300;900&display=swap|Source+Code+Pro:400,900">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+         crossorigin="anonymous" 
+         referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <div class="header-flex">
+                <div class="site-title">
+                    <p>&lt;code comments&gt;</p>
+                </div>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html#intro" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="index.html#recent" class="nav__link">Blog</a></li>
+                        <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        
+        <!-- Intro -->
+        <section class="intro-section container">
+
+            <div class="intro-text">
+                <h1>Responsive design 
+                </br>part I</h1>
+                <p>Read my top take-aways from the Scrimba responsive design module. Here's the first part of my checklist
+                for creating a website that is fully responsive.</p>
+            </div>
+
+        </section>
+
+        <section class="blog-section container">
+
+            <p>The responsive design module on Scrimba has cleared up so many CSS questions for me. As I worked through 
+            it I made some notes that I have turned into this checklist, that is as much for me as it is for anyone else! 
+            There's definitely still a lot of CSS that seems like sorcery, but I'm now feeling a little more confident
+            that I can build something that is actually responsive.  I hope you find this useful too.....</p>
+            
+            <h2>1. Mobile first design</h2>
+            <p>It turns out it is SO MUCH easier to start off by designing something to fit a small screen and then scaling 
+            it up with media queries than to start big and then try to scale it down.</p>
+            
+            <h2>2. Use the viewport meta tag</h2>
+            <p>Include the following meta tag in the head of your html to ensure your site is optimised 
+            for all screen sizes:</p>
+            <img src="img/viewport-img.png" alt="viewport meta tag code snippet" class="blog-seciton__img">
+            
+            <h2>3. Use a container class to centre your contents</h2>
+            <p>Block elements will automatically take up 100% of the parent element's width, so if you set the 
+            contents of your page within elements with the class "container" and set that container's width
+            to say, 90%, and centre the container, it ensure's your contents looks tidy and remains at the centre of 
+            the vieport. You could even set a max-width to stop the contents spreading out on a wider screen.</p>
+            <img src="img/container-img.png" alt="container class code snippet" class="blog-seciton__img">
+            
+            <h2>4. Inline and block elements</h2>
+            <p>OK, so this one isn't strictly about responsive design, but it is one of those CSS layout quirks that I will
+            need to keep coming back to: block elements will automatically display one on top of the other and inline elements 
+            will display in a row.  To change this behaviour use</br>
+            <strong>display: inline-block;</strong> to make block elements appear in a row</br>
+            <strong>display: block;</strong> to make inline elements display one on top of another</br>
+            As images are inline elements a handy hint was to set up the CSS for all images like so:</p>
+            <img src="img/img-element-img.png" alt="img element code snippet" class="blog-seciton__img">
+            <p><a href"https://www.freecodecamp.org/news/inline-elements-and-block-elements-in-html-explained/#:~:text=Inline%20Element%3A&text=Inline%20elements%20occupy%20the%20space,%3E%20%2C%20etc">
+            This Free Code Camp article </a>explains in more detail</p>
+
+            <h2>5. Setting image and container size</h2>
+            <p>Use % to set the size of images and containers. This ensures that they flex along with the screen size. But use 
+            pixels to set max width so that your contents doesn't get too spread out on a large screen.</p>
+
+            <h2>6. Font sizing</h2>
+            <p>REM is the unit that should be used for font size. REM means "root element font size". Rather than fixing font 
+            sizes in pixels if you set them to be relative to the root font size then to make your page responsive you simply 
+            increase the root element size with your media queries as the screen size increases.  In the below example even if the font size of the 
+            root element changes the font size of the H1 will always be 2 x the root element's font size.</p>
+            <img src="img/REM-img.png" alt="REM code snippet" class="blog-seciton__img">
+            <p>REM is also a winner when it comes to accessibility as users are able to change their browser's root font size.
+            In this case your text would scale accordingly.</p>
+
+            <h2>7. Margin and padding sizing</h2>
+            <p>EM is the unit to use when sizing margin and padding. Like REM, EM is scalable, but instead of being relative 
+            to the root element EM is relative to the parent element's font size, which of course is relative to the root 
+            element if you have used REM to size your font.</p>
+
+            </br><p>That's all for Part I. In <a href="responsive-design-pt2.html">Part II </a>I'll go into media queries and using grid layout to make your design responsive.</p>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/kath-fox-991a558a/">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/Kath-fox">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://twitter.com/KathFox5">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+            <p>Illustrations are from undraw.co</p>
+        </footer>
+
+    
+    <script src="js/index.js" type="module"></script>
+    </body>
+</html>
+
+
